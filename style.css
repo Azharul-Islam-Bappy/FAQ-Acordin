@@ -5,11 +5,20 @@
   padding: 0px; 
   margin: 0px;
   box-sizing: border-box; 
+  font-size: 17px; 
+  font-weight: 400;
+}
+
+h3{
+  font-size: 1.35rem;
+  line-height: 30px;
+  margin-right: 10px;
 }
 
 .content{
   width: 100%;
-  height: 100vh;
+  height: auto;
+  overflow: scroll;
 }
 .top-grapic{
   width: 100%;
@@ -20,14 +29,86 @@
   height: 60vh;
   background-color: hsla(275,100%,97%,1);
 }
+.faq-section{
+  background-color: white; 
+  border-radius: 1rem;
+  overflow: scroll;
+}
+.header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  
+  /* nested css */
+  .title{
+    font-size: 2.6rem;
+    margin-left: 1.4rem;
+    color: hsla(292,42%,14%,1);
+    font-weight: 700;
+  }
+}
+
+.qna{
+  border-bottom: 1.2px solid hsl(292, 16%, 49%);
+}
+
+.fourth-qna{
+  border: none;
+}
+
+.que{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  font-weight: 600; 
+  font-size: 1.8rem;
+  margin-block: .8rem;
+}
+
+.answer{
+  margin-block: .8rem;
+  color: hsl(292, 16%, 49%);
+  line-height: 30px;
+  display: none;
+}
 
 /* Media Queries */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
   .top-grapic{
     width: 100%;
     height: 40vh;
     background-image: url('./assets/images/background-pattern-mobile.svg');
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .faq-section{
+    width: 90%;
+    margin-inline: auto;
+    padding: 1.5rem; 
+    position: fixed;
+    top: 10vh;
+    left: 5%;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .top-grapic{
+    width: 100%;
+    height: 30vh;
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .faq-section{
+    width: 70%;
+    margin-inline: auto;
+    padding: 1.5rem; 
+    position: fixed;
+    top: 20vh;
+    left: 15%;
+  }
+  .bottom-grapic{
+    height: 70vh;
   }
 }
